@@ -6,6 +6,7 @@ import uuid
 from datetime import datetime
 from models import storage
 
+
 class BaseModel:
     """
     This is the BaseModel class
@@ -18,7 +19,7 @@ class BaseModel:
             **kwargs (dict): dictionary
             id (str): unique id for the BaseModel
             created_at (str): current datetime when the instance is created
-            updated_at (str): cureent datetime when the instance is created but updated
+            updated_at (str): cureent datetime when the instance is created
         """
         if kwargs:
             for k, v in kwargs.items():
@@ -35,21 +36,21 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             storage.new()
-    
+
     def __str__(self):
         """
         The class representation
         """
         return ("[{}] ({}) {}".format(
             type(self).__name__, self.id, self.__dict__))
-    
+
     def save(self):
         """
         Save method updates the public instance attribute - updated_at
         """
         self.updated_at = datetime.now()
         storage.save()
-    
+
     def to_dict(self):
         """
         Creates a dictionary representation of the class attributes
