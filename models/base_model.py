@@ -33,7 +33,12 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+<<<<<<< HEAD
             from models import storage  # Moved the import here to minimize circular dependency
+=======
+            from models import storage
+            # Adding the instance to the storage system
+>>>>>>> f15c7dc76833ddfa345492b7d1738da3d6a2f5e3
             storage.new(self)
 
     def __str__(self):
@@ -47,6 +52,8 @@ class BaseModel:
         """
         Save method updates the public instance attribute - updated_at
         """
+        from models import storage
+
         self.updated_at = datetime.now()
         storage.save()
 
