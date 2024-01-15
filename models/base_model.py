@@ -32,11 +32,8 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-<<<<<<< HEAD
             from models import storage
-=======
             # Adding the instance to the storage system
->>>>>>> 7e59b8394d2d5981f4dac17979dc97ccc8985cfd
             storage.new(self)
 
     def __str__(self):
