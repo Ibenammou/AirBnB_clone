@@ -5,7 +5,6 @@ import os
 import unittest
 from models import storage
 from models.engine.file_storage import FileStorage
-=======
 import sys
 from models import storage
 from models.engine.file_storage import FileStorage
@@ -1562,7 +1561,6 @@ class TestHBNBCommand_count(unittest.TestCase):
 
 
 if __name__ == "__main__":
-=======
     def test_create(self):
         #  Add tests for create command
         pass
