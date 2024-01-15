@@ -2,6 +2,7 @@
 import unittest
 from models.base_model import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
 
     def test_base_model(self):
@@ -18,6 +19,6 @@ class TestBaseModel(unittest.TestCase):
             print("\t{}: ({}) - {}".format(
                 key, type(my_model_json[key]), my_model_json[key]))
 
+
 if __name__ == '__main__':
     unittest.main()
-
